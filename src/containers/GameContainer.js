@@ -9,8 +9,9 @@ class GameContainer extends Component {
   }
 
   componentDidMount() {
-    fetch(PROXYURL + URL)
-      .then(res => res.json())
+    fetch(URL)
+    .then(res => res.json())
+    .then(deck => console.log(deck))
   }
 
     render() {
