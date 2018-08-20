@@ -11,7 +11,7 @@ class GameContainer extends Component {
   componentDidMount() {
     fetch(URL)
     .then(res => res.json())
-    .then(deck => console.log(deck))
+    .then(deck => this.setState({ deck }))
   }
 
     render() {
