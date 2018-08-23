@@ -1,3 +1,84 @@
 .App {
   text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+}
+
+.facedown {
+  font-weight: 100;
+  float: left;
+  margin-right: 15px;
+  line-height: 7px;
+  width: 150px;
+  height: 220px;
+  color: hsl(2, 100%, 80%);
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+
+}
+
+.faceup {
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 220px;
+  color: hsl(2, 100%, 80%);
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+.hand {
+  margin-left: 30%;
+}
+
+.dealer {
+  padding-left: 20%;
+  position: relative;
+  background-color: hsl(186, 100%, 98%);
+  position: relative;
+  height: 300px;
+}
+
+.player {
+  padding-left: 20%;
+  background-color: hsl(57, 100%, 97%);
+  position: relative;
+  height: 300px;
+}
+
+.button-container {
+  margin-left: 45%;
+}
+
+.b-text {
+  align-content: space-between;
+}
+
+#title {
+  margin-left: 70%;
+}
+
+#count {
+  margin-left: 70%;
+}
+
+#button {
+  margin-right: 10px;
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  border: solid .3px;
+  background-color: hsl(90, 100%, 97%);
+}
+
+
+
+
+
+.buttons {
 }
