@@ -6,26 +6,26 @@ class Card extends Component {
     faceup: false
   }
 
-  handleClick = () => {
+  handleClick = (value) => {
     this.setState({ faceup: !this.state.faceup })
-    console.log("props", this.props);
+    !this.state.faceup ? this.props.handleVisibleCards(value) : null
   }
 
     render() {
         const image = this.props.card.images.png
-        console.log("VISIBLE", this.props)
+        const value = this.props.card.value
       return (
         <div className="App">
           {this.state.faceup ?
             <div
               className="faceup"
-              onClick={() => console.log(this.props)} >
+              onClick={() => this.handleClick({value})} >
               <p>{this.props.card.value}</p>
               <p>{this.props.card.suit}</p>
             </div>
             :
             <div className="facedown"
-               onClick={() => console.log(this.props)} >
+               onClick={() => this.handleClick({value})} >
                **********************
                **********************
                **********************

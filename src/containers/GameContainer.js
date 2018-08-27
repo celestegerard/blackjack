@@ -3,7 +3,7 @@ import ButtonContainer from "./ButtonContainer";
 import DealerHand from "./DealerHand";
 import PlayerHand from "./PlayerHand";
 
-URL = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
+const url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
 const deal = "https://deckofcardsapi.com/api/deck/"
 const times = "/draw/?count=2"
 let id
@@ -17,7 +17,7 @@ class GameContainer extends Component {
   }
 
   handleStartClick = () => {
-    fetch(URL)
+    fetch(url)
     .then(res => res.json())
     .then(deck => this.setState({ deck }));
     this.setState({player: [] })

@@ -5,7 +5,12 @@ import Card from "../components/Card";
 
 class PlayerHand extends Component {
 
-  generateCards = () => this.props.player.map(card => <Card card={card} />)
+  handleVisibleCards = (value) => {
+    this.setState({ visibleCards: [...this.state.visibleCards, value ] })
+    console.log(this.state.visibleCards);
+  }
+
+  generateCards = () => this.props.player.map(card => <Card handleVisibleCards={this.handleVisibleCards} card={card} />)
 
   convertFaces = () => this.props.player.map(card => {
     return card.value.includes("KING") ||

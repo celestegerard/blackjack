@@ -6,14 +6,16 @@ import Card from "../components/Card";
 class DealerHand extends Component {
 
   state = {
-    visibile: []
+    visibile: [ "test", "lets see" ]
   }
 
-  visibleCards = () => {
-    console.log("hits!");
+  handleVisibleCards = (value) => {
+    const string = value.value.toString()
+    this.setState({ visible: this.state.visible })
+    console.log(this.state);
   }
 
-  generateCards = () => this.props.dealer.map(card => <Card card={card} visibleCards={this.visibleCards()} />)
+  generateCards = () => this.props.dealer.map(card => <Card card={card} handleVisibleCards={this.handleVisibleCards} />)
 
   convertFaces = () => this.props.dealer.map(card => {
     return card.value.includes("KING") ||
@@ -32,7 +34,6 @@ class DealerHand extends Component {
       const filteredCards = cards.map(card => card.props)
       const array = this.convertFaces()
       const sum = array.length === 0 ? 0 : this.sumArray()
-      console.log(sum);
 
       return (
         <div className="dealer">
