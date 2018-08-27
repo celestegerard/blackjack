@@ -24,8 +24,8 @@ class DealerHand extends Component {
     card.value.includes("JACK")  ? 10 : parseInt(card.value)
   })
 
-  sumArray = (array = this.convertFaces()) => array.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue
+  sumArray = (array = this.convertFaces()) => array.reduce((acc, val) => {
+    return acc + val
   });
 
 
