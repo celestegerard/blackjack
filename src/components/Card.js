@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Card extends Component {
 
   state = {
-    faceup: false
+    up: false
   }
 
   handleClick = (value) => {
