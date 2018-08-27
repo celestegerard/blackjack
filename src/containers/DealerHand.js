@@ -5,10 +5,6 @@ import Card from "../components/Card";
 
 class DealerHand extends Component {
 
-  state = {
-    visibile: [ "test", "lets see" ]
-  }
-
   handleVisibleCards = (value) => {
     const string = value.value.toString()
     this.setState({ visible: this.state.visible })
