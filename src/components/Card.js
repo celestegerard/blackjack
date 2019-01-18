@@ -6,10 +6,12 @@ class Card extends Component {
     faceup: false
   }
 
-  handleClick = (value) => {
+  handleClick = value => {
     this.setState({ faceup: !this.state.faceup })
     !this.state.faceup ? this.props.handleVisibleCards(value) : null
   }
+
+
 
     render() {
         const image = this.props.card.images.png
